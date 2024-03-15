@@ -31,7 +31,7 @@ app.get("/",function(re,res){
 
 app.use(express.json());
 
-app.post("/",function(req,res){
+app.post("/",function(req,res){ 
    
     const isHealthy=req.body.isHealthy;
     users[0].kidneys.push({
@@ -100,3 +100,5 @@ app.get("/files/:fileName",function(req,res){
     })
    
 })
+
+

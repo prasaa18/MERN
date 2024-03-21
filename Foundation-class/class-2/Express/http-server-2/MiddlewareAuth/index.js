@@ -39,7 +39,7 @@ function userMuidleware(req,res, next){
             msg:"input wrong"
         })
     }else{
-        next();
+        next();  
     }
 }; 
 app.get("health-checkup" ,userMuidleware,function(req,res){

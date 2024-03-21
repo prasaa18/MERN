@@ -1,0 +1,79 @@
+
+<body>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname"/>
+<input type="submit" value="Submit"/>
+</form>
+
+
+
+<h2>hi </h2>
+<div id="mydiv">
+  <h2 class="example"> a headibg</h2>
+  <p class="example">paragrap</p>
+  <p class="example"> a paragrap</p>
+</div>
+<p id="demo"></p>
+
+
+<style>
+  .democlass{
+    color: red;
+  }
+</style>
+
+<p id="myh1">hello from new color added afterbutton click</p>
+<button onclick="myFunc()">change id color</button>
+</body>
+
+<script>
+function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+
+</script>
+<script>
+  var paragrap= document.querySelectorAll(p.intro);
+  paragrap.forEach(paragrap=> paragrap.style.backgroundColor="red")
+
+
+  //
+  const element=document.getElementById("mydiv");
+  const list =element.querySelectorAll(".example");
+  document.getElementById("demo").innerHTML=list.length;
+
+
+  ///
+  document.getElementById("imgge").sec="exmple.jpg"
+  
+  //dynamic html Content
+  document.getElementById("demo").innerHTML="date:"+Date();
+
+  //setAttribute
+function myFunc(){
+  document.getElementById("myh1").setAttribute("class","democlass");
+  document.getElementById("myh1").setAttribute("type","button");
+}
+
+
+//
+const  para= document.createElement("p");
+para.innerHTML="this is a paragra"
+
+document.getElementById("demo").appendChild(para);
+
+const remoChild=document.getElementById("demo");
+para.removeChild(remoChild);
+
+//replaceNOde
+const ele= document.getElementById("mylist").children[1];
+const newnode= document.createTextNode("juice");
+element.replaceChild(newnode,ele.childNodes[0]);
+
+
+
+</script>

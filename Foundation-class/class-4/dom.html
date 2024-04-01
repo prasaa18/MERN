@@ -1,0 +1,29 @@
+
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname"/>
+    <input type="submit" value="Submit"/>
+    </form>
+    
+    
+    
+    <h2>hi </h2>
+    <div class="mydiv">
+      <h2 class="example"> a headibg</h2>
+      <p class="example">paragrap</p>
+      <p class="example"> a paragrap</p>
+    </div>
+    <p id="demo"></p>
+    
+</body>
+<script>
+  
+ const ul=   document.querySelector(".example");
+ console.log(ul.parentNode);
+ ul.parentNode.style.color="red"
+
+
+console.log(ul.children[1]);
+console.log(ul.previousElementSibling)
+
+</script>    

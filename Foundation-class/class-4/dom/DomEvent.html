@@ -1,0 +1,40 @@
+<body>
+
+<h2>hi </h2>
+<div id="mydiv">
+  <h2 class="example"> a headibg</h2>
+  <p class="example">paragrap</p>
+  <p class="example"> a paragrap</p>
+</div>
+<p id="demo"></p>
+ 
+
+<h1>javascript</h1>
+<h2 onclick="this.innerHTML='oops'">clic to  chanegx</h2>
+
+
+enter name:<input type="text" id="fname" oninput="uppercase()">
+<p>this is lower caese</p>
+
+
+<button id="myntn"> try it</button>
+</body>
+
+<script>
+    function uppercase(){
+        const x =document.getElementById("fname");
+        x.value= x.value.toUpperCase();
+    } 
+
+document.getElementById("myntn").addEventListener("click",myfun);
+
+    function myfun(){
+        alert('hello')
+    }
+
+
+    // window.addEventListener("resize", myfun(){
+    //     document.getElementById("myntn").innerHTML= Mth.random();
+    // });
+</script>
+=/8|

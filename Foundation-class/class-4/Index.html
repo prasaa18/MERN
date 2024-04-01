@@ -1,0 +1,44 @@
+Used setInterval() and oninput attribute to achieve to get total amount and interest amount after all the p, t and r entries are been given
+
+CODE :
+====
+
+
+<body>
+<input type = "text" id = "principle" placeholder="principle amount" oninput = "pval(this)"><br><br>
+<input type = "text" id = "time" placeholder="Time duration" oninput = "tval(this)"><br><br>
+<input type = "text" id = "interest" placeholder="Rate of Interest" oninput = "rval(this)"><br><br>
+<!-- <input type = "button" value = "calculation simple Interest" onclick = "ptr()"> -->
+<p id = 'res'></p>
+
+<script>
+var p, t, r;
+function pval(ref)
+{
+p = parseInt(ref.value);
+}
+function tval(ref)
+{
+t = parseInt(ref.value);
+}
+function rval(ref)
+{
+r = parseInt(ref.value);
+}
+setInterval(() =>
+{
+const res = document.getElementById('res');
+
+if(p != NaN && t != NaN && r != NaN)
+{
+const url = "https://sum-server.100xdevs.com/interest?principal="+p+"&rate="+r+"&time="+t;
+fetch(url)
+.then(response => response.json())
+.then(data => document.getElementById('res').innerHTML = 'Total : '+data.total+'<br><br>'+'Interest : '+data.interest)
+.catch(err => document.getElementById('res').innerHTML = `sorry something went wrong`);
+}
+}, 500);
+</script>  
+</body>
+
+

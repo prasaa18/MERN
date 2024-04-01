@@ -15,8 +15,23 @@ router.get('/courses', (req, res) => {
     // Implement listing all courses logic
 });
 
-router.post('/courses/:courseId', userMiddleware, (req, res) => {
+router.post('/courses/:courseId', userMiddleware,  async(req, res) => {
     // Implement course purchase logic
+
+    const courseId = req.params.courseId;
+    const username = req.username;   // which will be from  usermiddleware req.username= jwtDEcode.username
+    console.log(username);
+
+    // await User.updateOne({
+    //     username: username
+    // }, {
+    //     "$push": {
+    //         purchasedCourses: courseId
+    //     }
+    // })
+    // res.json({
+    //     message: "Purchase complete!"
+    // })
 });
 
 router.get('/purchasedCourses', userMiddleware, (req, res) => {

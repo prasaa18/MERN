@@ -7,7 +7,7 @@ const todoschema= mongoose.Schema({
     completed:Boolean
 })
 
-mongooose.connect(
+mongoose.connect(
     "mongodb+srv://admin:admin@cluster0.hs3mybp.mongodb.net/todos"
 )
 
